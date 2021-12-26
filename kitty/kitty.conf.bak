@@ -1,0 +1,12 @@
+font_family      Cascadia Code
+italic_font      auto
+bold_font        auto
+bold_italic_font auto
+
+font_size 14.0
+
+
+# BEGIN_KITTY_THEME
+# Atom
+include current-theme.conf
+# END_KITTY_THEME
