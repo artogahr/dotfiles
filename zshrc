@@ -8,12 +8,10 @@
  #   export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 
     antibody bundle robbyrussell/oh-my-zsh
-    antibody bundle robbyrussell/oh-my-zsh path:plugins/gpg-agent
     antibody bundle robbyrussell/oh-my-zsh path:plugins/jump
     antibody bundle robbyrussell/oh-my-zsh path:plugins/nmap
     antibody bundle robbyrussell/oh-my-zsh path:plugins/pass
     antibody bundle robbyrussell/oh-my-zsh path:plugins/rsync
-    antibody bundle robbyrussell/oh-my-zsh path:plugins/ssh-agent
     antibody bundle robbyrussell/oh-my-zsh path:plugins/tmux
     antibody bundle robbyrussell/oh-my-zsh path:plugins/tmuxinator
     antibody bundle robbyrussell/oh-my-zsh path:plugins/z
