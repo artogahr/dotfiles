@@ -45,7 +45,11 @@
 
     export GIT_EDITOR=nvim
 
+    GOPATH=$HOME/go
+    GOROOT=/usr/lib/go
+
     path=(
+	$GOPATH/bin
         $HOME/.local/bin
         $HOME/.bin
         $HOME/bin
@@ -79,6 +83,7 @@
 
     # General
     alias vim="nvim"
+    alias cat="bat -p"
     alias mux="tmuxinator"
     alias copy="xclip -selection clipboard"
     alias paste="xclip -o -selection clipboard"
