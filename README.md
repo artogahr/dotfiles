@@ -1,5 +1,4 @@
 # dotfiles
 Configuration files for various applications that I use.
 
-- init.vim - NeoVim
-- settings.json - Windows Terminal
+./install.sh will install the files to the appropriate places.
