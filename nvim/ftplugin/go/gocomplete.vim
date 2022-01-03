@@ -1,0 +1,1 @@
+/home/arto/.config/nvim/plugins/gocode/nvim/ftplugin/go/gocomplete.vim

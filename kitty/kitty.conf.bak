@@ -13,7 +13,7 @@ initial_window_height 750
 window_padding_width 10
 hide_window_decorations yes
 enable_audio_bell no
-background_opacity 0.9
+background_opacity 0.95
 
 
 
