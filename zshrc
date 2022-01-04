@@ -83,6 +83,7 @@
 
     # General
     alias vim="nvim"
+    alias ssh="kitty +kitten ssh"
     alias cat="bat -p"
     alias mux="tmuxinator"
     alias copy="xclip -selection clipboard"
