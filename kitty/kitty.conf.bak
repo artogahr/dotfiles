@@ -16,6 +16,6 @@ enable_audio_bell no
 #background_opacity 0.95
 # auto added by Night Theme Switcher extension using kitty +kitten theme
 # BEGIN_KITTY_THEME
-# Kaolin Dark
+# Kaolin Light
 include current-theme.conf
 # END_KITTY_THEME
