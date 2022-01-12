@@ -84,13 +84,13 @@
     # General
     alias vim="nvim"
     alias ssh="kitty +kitten ssh"
-    alias cat="bat -p"
     alias mux="tmuxinator"
     alias copy="xclip -selection clipboard"
     alias paste="xclip -o -selection clipboard"
-    alias ag="sag"
-    #alias cat="bat"
     alias webcam="gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video1"
+    # Stop and Remove all containers
+    alias drmaci='(docker stop $(docker ps -a -q) || true) && (docker rm $(docker ps -a -q) || true)'
+
 
     # Open vim with z argument
     v() {
