@@ -22,9 +22,6 @@
 
     # This needs to be the last bundle.
     antibody bundle zsh-users/zsh-syntax-highlighting
-
-    # Load the theme.
-    # antibody bundle robbyrussell/oh-my-zsh path:themes/robbyrussell.zsh-theme
     antibody bundle dracula/zsh
 
 # }}}
@@ -58,10 +55,6 @@
         $path
     )
 
-    setopt auto_cd
-    cdpath=(
-        $HOME/Code
-    )
 
     zstyle ':completion:*' group-name ''
     zstyle ':completion:*:descriptions' format %d
@@ -71,8 +64,6 @@
 
     export EDITOR='nvim'
     export NVIM_LISTEN_ADDRESS='/tmp/nvimsocket'
-    export ARTISAN_OPEN_ON_MAKE_EDITOR='nvr'
-    export FZF_DEFAULT_COMMAND='ag -u -g ""'
 
     unsetopt sharehistory
 
@@ -84,22 +75,9 @@
     # General
     alias vim="nvim"
     alias ssh="kitty +kitten ssh"
-    alias mux="tmuxinator"
-    alias copy="xclip -selection clipboard"
-    alias paste="xclip -o -selection clipboard"
-    alias webcam="gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video1"
     # Stop and Remove all containers
     alias drmaci='(docker stop $(docker ps -a -q) || true) && (docker rm $(docker ps -a -q) || true)'
 
-
-    # Open vim with z argument
-    v() {
-      if [ -n "$1" ]; then
-        z $1
-      fi
-
-      nvim
-    }
 
     # cd() {
     #     cd $1 && eval ls
@@ -109,22 +87,6 @@
         xdg-open $* > /dev/null 2>&1
     }
 
-    if (( $+commands[tag] )); then
-        tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null }
-        alias ag=tag
-    fi
-
 # }}}
 
-# Interactive shell startup scripts {{{
-# ==============================================================================
 
-    if [[ $- == *i* && $0 == '/bin/zsh' ]]; then
-        ~/.dotfiles/scripts/login.sh
-    fi
-
-# }}}
-
-# vim: set nospell foldmethod=marker foldlevel=0:
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
