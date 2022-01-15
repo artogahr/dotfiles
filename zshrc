@@ -5,11 +5,16 @@
     source <(antibody init)
 
     # Setup required env var for oh-my-zsh plugins
+ #   export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+
     antibody bundle robbyrussell/oh-my-zsh
     antibody bundle robbyrussell/oh-my-zsh path:plugins/jump
     antibody bundle robbyrussell/oh-my-zsh path:plugins/nmap
     antibody bundle robbyrussell/oh-my-zsh path:plugins/pass
     antibody bundle robbyrussell/oh-my-zsh path:plugins/rsync
+    antibody bundle robbyrussell/oh-my-zsh path:plugins/tmux
+    antibody bundle robbyrussell/oh-my-zsh path:plugins/tmuxinator
+    antibody bundle robbyrussell/oh-my-zsh path:plugins/z
 
     # Other bundles
     antibody bundle sampson-chen/sack
@@ -18,6 +23,9 @@
     # This needs to be the last bundle.
     antibody bundle zsh-users/zsh-syntax-highlighting
 
+    # Load the theme.
+    # antibody bundle robbyrussell/oh-my-zsh path:themes/robbyrussell.zsh-theme
+    antibody bundle dracula/zsh
 
 # }}}
 
@@ -50,6 +58,11 @@
         $path
     )
 
+    setopt auto_cd
+    cdpath=(
+        $HOME/Code
+    )
+
     zstyle ':completion:*' group-name ''
     zstyle ':completion:*:descriptions' format %d
     zstyle ':completion:*:descriptions' format %B%d%b
@@ -71,9 +84,22 @@
     # General
     alias vim="nvim"
     alias ssh="kitty +kitten ssh"
+    alias mux="tmuxinator"
+    alias copy="xclip -selection clipboard"
+    alias paste="xclip -o -selection clipboard"
+    alias webcam="gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video1"
     # Stop and Remove all containers
     alias drmaci='(docker stop $(docker ps -a -q) || true) && (docker rm $(docker ps -a -q) || true)'
 
+
+    # Open vim with z argument
+    v() {
+      if [ -n "$1" ]; then
+        z $1
+      fi
+
+      nvim
+    }
 
     # cd() {
     #     cd $1 && eval ls
@@ -83,4 +109,22 @@
         xdg-open $* > /dev/null 2>&1
     }
 
+    if (( $+commands[tag] )); then
+        tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null }
+        alias ag=tag
+    fi
+
 # }}}
+
+# Interactive shell startup scripts {{{
+# ==============================================================================
+
+    if [[ $- == *i* && $0 == '/bin/zsh' ]]; then
+        ~/.dotfiles/scripts/login.sh
+    fi
+
+# }}}
+
+# vim: set nospell foldmethod=marker foldlevel=0:
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

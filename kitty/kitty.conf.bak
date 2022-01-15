@@ -1,0 +1,25 @@
+# Install via https://github.com/ronniedroid/getnf
+# Verify installation via `kitty list-fonts | grep Jet`
+#font_family JetBrainsMono Nerd Font
+#font_family Fira Code
+font_family Cascadia Code
+
+font_size 14
+adjust_line_height 150%
+
+remember_window_size  no
+initial_window_width  1250
+initial_window_height 750
+window_padding_width 10
+hide_window_decorations yes
+enable_audio_bell no
+background_opacity 0.96
+
+# auto added by Night Theme Switcher extension using kitty +kitten theme
+include current-theme.conf
+
+
+# BEGIN_KITTY_THEME
+# Kaolin Light
+include current-theme.conf
+# END_KITTY_THEME
