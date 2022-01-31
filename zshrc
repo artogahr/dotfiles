@@ -38,6 +38,8 @@
 
     # Vim mode
     bindkey -v
+    # For reverse search
+    bindkey '^R' history-incremental-search-backward
     export KEYTIMEOUT=1
 
     export GIT_EDITOR=nvim
