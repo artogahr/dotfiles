@@ -38,8 +38,14 @@
 
     # Vim mode
     bindkey -v
-    # For reverse search
-    bindkey '^R' history-incremental-search-backward
+    # Search backwards and forwards with a pattern
+    bindkey -M vicmd '/' history-incremental-pattern-search-backward
+    bindkey -M vicmd '?' history-incremental-pattern-search-forward
+
+    # set up for insert mode too
+    bindkey -M viins '^R' history-incremental-pattern-search-backward
+    bindkey -M viins '^F' history-incremental-pattern-search-forward
+
     export KEYTIMEOUT=1
 
     export GIT_EDITOR=nvim
