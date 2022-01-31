@@ -77,6 +77,9 @@
     alias ssh="kitty +kitten ssh"
     # Stop and Remove all containers
     alias drmaci='(docker stop $(docker ps -a -q) || true) && (docker rm $(docker ps -a -q) || true)'
+    alias ii='sudo envycontrol --switch integrated && reboot'
+    alias hh='sudo envycontrol --switch hybrid && reboot'
+    alias nn='sudo envycontrol --switch nvidia && reboot'
 
 
     # cd() {
