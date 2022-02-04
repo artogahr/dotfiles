@@ -88,6 +88,7 @@
     alias ii='sudo envycontrol --switch integrated && reboot'
     alias hh='sudo envycontrol --switch hybrid && reboot'
     alias nn='sudo envycontrol --switch nvidia && reboot'
+    alias ss='sudo envycontrol --status'
 
 
     # cd() {
