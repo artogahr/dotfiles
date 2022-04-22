@@ -30,7 +30,7 @@
 # ==============================================================================
 
     HYPHEN_INSENSITIVE="true"
-    ENABLE_CORRECTION="false"
+    ENABLE_CORRECTION="true"
     COMPLETION_WAITING_DOTS="true"
     HIST_STAMPS="yyyy-mm-dd"
 
