@@ -81,7 +81,6 @@
 # ==============================================================================
 
     # General
-    alias vim="nvim"
     alias ssh="kitty +kitten ssh"
     # Stop and Remove all containers
     alias drmaci='(docker stop $(docker ps -a -q) || true) && (docker rm $(docker ps -a -q) || true)'
@@ -89,6 +88,7 @@
     alias hh='sudo envycontrol --switch hybrid && reboot'
     alias nn='sudo envycontrol --switch nvidia && reboot'
     alias ss='sudo envycontrol --status'
+    alias hg="history | grep"
     # Wireguard
     alias up='sudo wg-quick up wg0'
     alias down='sudo wg-quick down wg0'
