@@ -6,14 +6,17 @@ call plug#begin('~/.dotfiles/nvim/plugins')
 	Plug 'tpope/vim-sleuth'
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-flagship'
+	Plug 'psliwka/vim-smoothie'
+	Plug 'lukas-reineke/indent-blankline.nvim'
 "#	Plug 'nsf/gocode', {'rtp': 'nvim', 'do': '~/.config/nvim/plugins/gocode/nvim/symlink.sh'}
 "#	Plug 'deoplete-plugins/deoplete-go', {'do': 'make'}
 call plug#end()
 
-set laststatus=2
-set showtabline=2
-set guioptions-=e
+set laststatus=0
+set showtabline=0
+"set guioptions-=e
 
 set number
+set laststatus=0
 set relativenumber
 set shell=/usr/bin/zsh
