@@ -8,17 +8,14 @@
  #   export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 
     antibody bundle robbyrussell/oh-my-zsh
-    antibody bundle robbyrussell/oh-my-zsh path:plugins/jump
     antibody bundle robbyrussell/oh-my-zsh path:plugins/nmap
-    antibody bundle robbyrussell/oh-my-zsh path:plugins/pass
     antibody bundle robbyrussell/oh-my-zsh path:plugins/rsync
-    antibody bundle robbyrussell/oh-my-zsh path:plugins/tmux
-    antibody bundle robbyrussell/oh-my-zsh path:plugins/tmuxinator
     antibody bundle robbyrussell/oh-my-zsh path:plugins/z
 
     # Other bundles
     antibody bundle sampson-chen/sack
     antibody bundle zsh-users/zsh-autosuggestions
+#    antibody bundle marlonrichert/zsh-autocomplete
 
     # This needs to be the last bundle.
     antibody bundle zsh-users/zsh-syntax-highlighting
@@ -84,10 +81,6 @@
     alias ssh="kitty +kitten ssh"
     # Stop and Remove all containers
     alias drmaci='(docker stop $(docker ps -a -q) || true) && (docker rm $(docker ps -a -q) || true)'
-    alias ii='sudo envycontrol --switch integrated && reboot'
-    alias hh='sudo envycontrol --switch hybrid && reboot'
-    alias nn='sudo envycontrol --switch nvidia && reboot'
-    alias ss='sudo envycontrol --status'
     alias hg="history | grep"
     # Wireguard
     alias up='sudo wg-quick up wg0'
