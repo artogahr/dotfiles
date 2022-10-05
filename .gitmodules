@@ -2,21 +2,3 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "nvim/plugins/vim-go"]
-	path = nvim/plugins/vim-go
-	url = https://github.com/fatih/vim-go
-[submodule "nvim/plugins/coc.nvim"]
-	path = nvim/plugins/coc.nvim
-	url = https://github.com/neoclide/coc.nvim
-[submodule "nvim/plugins/vim-commentary"]
-	path = nvim/plugins/vim-commentary
-	url = https://github.com/tpope/vim-commentary
-[submodule "nvim/plugins/vim-flagship"]
-	path = nvim/plugins/vim-flagship
-	url = https://github.com/tpope/vim-flagship
-[submodule "nvim/plugins/vim-sleuth"]
-	path = nvim/plugins/vim-sleuth
-	url = https://github.com/tpope/vim-sleuth
-[submodule "nvim/plugins/vim-sensible"]
-	path = nvim/plugins/vim-sensible
-	url = https://github.com/tpope/vim-sensible
