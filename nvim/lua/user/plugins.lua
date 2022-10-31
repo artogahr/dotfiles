@@ -60,6 +60,8 @@ return packer.startup(function(use)
   use { "folke/tokyonight.nvim"}
   use { "lunarvim/darkplus.nvim"}
   use { "Mofiqul/dracula.nvim"}
+  use { "Shatur/neovim-ayu"}
+  use { "catppuccin/nvim"}
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp"} -- The completion plugin
