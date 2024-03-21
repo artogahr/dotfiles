@@ -50,4 +50,5 @@ return {
     },
     config = true,
   },
+  { 'nvim-tree/nvim-web-devicons' },
 }
