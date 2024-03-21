@@ -38,4 +38,16 @@ return {
       vim.g.floaterm_keymap_toggle = '<a-cr>'
     end,
   },
+  {
+    'NeogitOrg/neogit',
+    dependencies = {
+      'nvim-lua/plenary.nvim', -- required
+      'sindrets/diffview.nvim', -- optional - Diff integration
+      'nvim-telescope/telescope.nvim', -- optional
+    },
+    keys = {
+      { '<leader>gt', '<cmd>Neogit<cr>', 'NeoGit' },
+    },
+    config = true,
+  },
 }
