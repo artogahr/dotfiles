@@ -1,0 +1,44 @@
+# Config file for an SK61 board, to be used with GK6X
+
+[Macro(LeftDesktop,0,RepeatXTimes,1)]
+Press:RCtrl+RWin+Left
+[Macro(RightDesktop,0,RepeatXTimes,1)]
+Press:RCtrl+RWin+Right
+[Macro(CtrlAltDel,0,RepeatXTimes,1)]
+Press:LCtrl+LAlt+Delete
+
+[Macro(ShiftDelete,0,RepeatXTimes,1)]
+Press:RCtrl+Left
+
+# Use CapsLock as layer switch for shortcuts
+[Layer1]
+CapsLock:TempSwitchLayer2
+LCtrl:4294967295
+
+[Layer2]
+I:Macro(RightDesktop)
+U:Macro(LeftDesktop)
+CloseSquareBrace:LCtrl+Right
+OpenSquareBrace:LCtrl+Left
+LShift:TempSwitchLayer3
+Backspace:Delete
+P:PrintScreen
+
+# Vim Navigation
+H:Left
+J:Down
+K:Up
+L:Right
+
+# Media
+D:MediaNext
+A:MediaPrevious
+M:VolumeMute
+S:VolumeDown
+W:VolumeUp
+Subtract:VolumeDown
+Add:VolumeUp
+Space:MediaPlayPause
+
+[FnLayer2]
+Backspace:Macro(CtrlAltDel)
