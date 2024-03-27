@@ -1,4 +1,6 @@
 # Config file for an SK61 board, to be used with GK6X
+# Designed to be used with Layer 1 (Not the base layer)
+# CapsLock acts as a temp layer switch to access shortcuts
 
 [Macro(LeftDesktop,0,RepeatXTimes,1)]
 Press:RCtrl+RWin+Left
@@ -6,23 +8,24 @@ Press:RCtrl+RWin+Left
 Press:RCtrl+RWin+Right
 [Macro(CtrlAltDel,0,RepeatXTimes,1)]
 Press:LCtrl+LAlt+Delete
-
 [Macro(ShiftDelete,0,RepeatXTimes,1)]
 Press:RCtrl+Left
 
 # Use CapsLock as layer switch for shortcuts
 [Layer1]
 CapsLock:TempSwitchLayer2
-LCtrl:4294967295
 
 [Layer2]
+# Switch virtual desktops
 I:Macro(RightDesktop)
 U:Macro(LeftDesktop)
+# One word right or left
 CloseSquareBrace:LCtrl+Right
 OpenSquareBrace:LCtrl+Left
-LShift:TempSwitchLayer3
 Backspace:Delete
 P:PrintScreen
+Period:End
+Comma:Home
 
 # Vim Navigation
 H:Left
@@ -40,5 +43,6 @@ Subtract:VolumeDown
 Add:VolumeUp
 Space:MediaPlayPause
 
+# CapsLock + Fn
 [FnLayer2]
 Backspace:Macro(CtrlAltDel)
