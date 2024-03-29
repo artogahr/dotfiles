@@ -11,5 +11,4 @@
     ~/.config/kitty: kitty
     ~/.config/nvim: nvim
     ~/.config/ranger: ranger
-
-
+    ~/.config/hyprland: ranger
