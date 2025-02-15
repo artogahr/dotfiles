@@ -15,7 +15,7 @@ option_as_alt = "Both"
 [font]
 normal.family = "FiraCode Nerd Font"
 
-size = 14
+size = 12
 
 [general]
 import = [
